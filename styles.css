@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+/* General styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,10 +32,36 @@ p,
 li {
     line-height: 1.75;
 }
-
+/* upper element 'Join our community' */
 .container {
     background-color: #fff;
+    border-radius: .625rem;
 }
+
+p.green {
+    color: var(--bright-yellow);
+    font-weight: 700;
+}
+
+.container>article:first-child {
+    padding: var(--standard-margin)
+}
+
+.container>article:first-child h1,
+.container>article:first-child p {
+    margin-bottom: calc(.5*--standard-margin);
+
+}
+
+.container>article:first-child h1 {
+    color: var(--cyan);
+}
+
+.container>article:first-child p:last-child {
+    color: var(--grayish-blue);
+}
+
+/* bottom left element 'Monthly subscription' */
 
 .btn {
     background-color: var(--bright-yellow);
@@ -42,34 +70,16 @@ li {
     font-size: 1rem;
     font-weight: bold;
     padding: 0.625rem 1.25rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     outline: none;
     border: none;
     cursor: pointer;
-    margin: 2rem 2rem 0 2rem; 
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
-p.green {
-    color: var(--bright-yellow);
-    font-weight: 700;
-}
-
-.container > article:first-child {
-    padding: var(--standard-margin)
-}
-
-.container > article:first-child h1,
-.container>article:first-child p {
-    margin-bottom: calc(.5*--standard-margin);
-    
-}
-
-.container > article:first-child h1 {
-    color: var(--cyan);
-}
-
-.container > article:first-child p:last-child {
-    color: var(--grayish-blue);
+.btn:hover {
+    transform: scale(1.05);
 }
 
 .container section {
@@ -79,24 +89,84 @@ p.green {
 
 .container section article {
     padding: var(--standard-margin);
+    color: #fff;
 }
 
 .container section article:first-child {
     background-color: var(--cyan);
 }
 
+.container section article:first-child h2 {
+    margin-bottom: calc(var(--standard-margin)*.5);
+}
+
+.container section article:first-child h3 {
+    font-size: 1rem;
+    font-weight: 400; 
+    display: flex;
+    align-items: center;
+    color: var(--light-gray);
+}
+
+.container section article:first-child h3 span {
+    font-size: 2rem;
+    font-weight: 700; 
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.container section article:first-child p {
+    margin: 1rem 0;
+}
+
+/* bottom right element 'Why Us' */
+
 .container section article:nth-child(2) {
-    background-color: ;
+    background-color: var(--light-cyan);
 }
 
-
-
-p,
-li {
-    line-height: 1.;
+.container section article:last-child {
+    background-color: var(--light-cyan);
+    border-radius: 0 0 .625rem .625rem;
 }
+
+.container section article:last-child h2 {
+    margin-bottom: 1rem;
+}
+
+/* Responsiveness */
+
+@media (min-width: 651px) {
+    .container {
+        max-width: 700px;
+        margin: auto;
+    }
+    
+    .container>article:first-child h1 {
+        font-size: 2rem;
+    }
+
+    .container section {
+        flex-direction: row;
+    }
+}
+
+    .container section article:first-child {
+    flex: 1;
+    border-bottom-left-radius: .625rem;
+    border-radius: 0;
+    }
+
+    .container section article:last-child {
+    flex: 1;
+    border-bottom-right-radius: .625rem;
+    }
+
+
+/* attribution design by front-end dev */
 
 .attribution {
+    margin-top: var(--standard-margin);
     font-size: 11px;
     text-align: center;
 }
