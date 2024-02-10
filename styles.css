@@ -141,7 +141,7 @@ p.green {
         max-width: 700px;
         margin: auto;
     }
-    
+
     .container>article:first-child h1 {
         font-size: 2rem;
     }
@@ -149,19 +149,19 @@ p.green {
     .container section {
         flex-direction: row;
     }
-}
 
     .container section article:first-child {
-    flex: 1;
-    border-bottom-left-radius: .625rem;
-    border-radius: 0;
+        flex: 1;
+        border-bottom-left-radius: .625rem;
     }
 
     .container section article:last-child {
-    flex: 1;
-    border-bottom-right-radius: .625rem;
+        flex: 1;
+        border-radius: 0 0 .625rem 0;
     }
+}
 
+    
 
 /* attribution design by front-end dev */
 
