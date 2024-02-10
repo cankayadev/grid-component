@@ -1,16 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --cyan: hsl(179, 62%, 43%); 
     --bright-yellow: hsl(71, 73%, 54%);
-    --light-gray: hsl(204, 43%, 93%);--grayish-blue: hsl(218, 22%, 67%)
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --light-cyan: hsl(179, 55%, 47%);
+    --standard-margin: 2rem;
 }
 
 body {
     font-size: 16px;
     font-family: 'Karla', sans-serif;
+    background-color: var(--light-gray);
+    padding: 1.5rem;
 }
 
+ul {
+    list-style-type: none;
+}
+
+p, 
+li {
+    line-height: 1.75;
+}
+
+.container {
+    background-color: #fff;
+}
+
+.btn {
+    background-color: var(--bright-yellow);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 2rem 2rem 0 2rem; 
+}
+
+p.green {
+    color: var(--bright-yellow);
+    font-weight: 700;
+}
+
+.container > article:first-child {
+    padding: var(--standard-margin)
+}
+
+.container > article:first-child h1,
+.container>article:first-child p {
+    margin-bottom: calc(.5*--standard-margin);
+    
+}
+
+.container > article:first-child h1 {
+    color: var(--cyan);
+}
+
+.container > article:first-child p:last-child {
+    color: var(--grayish-blue);
+}
+
+.container section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container section article {
+    padding: var(--standard-margin);
+}
+
+.container section article:first-child {
+    background-color: var(--cyan);
+}
+
+.container section article:nth-child(2) {
+    background-color: ;
+}
+
+
+
+p,
+li {
+    line-height: 1.;
+}
 
 .attribution {
     font-size: 11px;
