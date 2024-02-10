@@ -24,14 +24,22 @@ body {
     padding: 1.5rem;
 }
 
+
 ul {
     list-style-type: none;
+    color: var(--light-gray);
 }
 
 p, 
 li {
     line-height: 1.75;
 }
+
+.btn, 
+.container {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.075);
+}
+
 /* upper element 'Join our community' */
 .container {
     background-color: #fff;
@@ -76,6 +84,7 @@ p.green {
     cursor: pointer;
     width: 100%;
     transition: transform 0.5s ease-in-out;
+    height: 3.5rem;
 }
 
 .btn:hover {
@@ -116,14 +125,10 @@ p.green {
 }
 
 .container section article:first-child p {
-    margin: 1rem 0;
+    margin: 1rem 0 2.5rem;
 }
 
 /* bottom right element 'Why Us' */
-
-.container section article:nth-child(2) {
-    background-color: var(--light-cyan);
-}
 
 .container section article:last-child {
     background-color: var(--light-cyan);
@@ -137,6 +142,13 @@ p.green {
 /* Responsiveness */
 
 @media (min-width: 651px) {
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 5rem );
+    }
+    
     .container {
         max-width: 700px;
         margin: auto;
@@ -150,13 +162,17 @@ p.green {
         flex-direction: row;
     }
 
-    .container section article:first-child {
+    .container section article:first-child, 
+    .container section article:last-child {
         flex: 1;
+        padding-top: calc(var(--standard-margin) * 1.5);
+    }
+
+    .container section article:first-child {
         border-bottom-left-radius: .625rem;
     }
 
     .container section article:last-child {
-        flex: 1;
         border-radius: 0 0 .625rem 0;
     }
 }
@@ -165,12 +181,37 @@ p.green {
 
 /* attribution design by front-end dev */
 
+
 .attribution {
-    margin-top: var(--standard-margin);
     font-size: 11px;
     text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.attribution:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    font-weight: bold;
+    background-image: linear-gradient(120deg, #ff0084 0%, #33001b 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease-out;
+}
+
+.attribution a:hover {
+    background-image: linear-gradient(120deg, #33001b 0%, #ff0084 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
 }
